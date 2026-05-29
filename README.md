@@ -52,3 +52,13 @@
 * `sudo su -` : 一時的に最強の特権階級（ルートユーザー）に変身します。用が済んだら必ず `exit` で戻るのが鉄則です。
 * `systemctl` : サーバーの裏で動くプログラム（サービス）を管理する守護神です。（例: `systemctl status apache2` で状態確認、`stop` で停止）
 * `apt` : （Ubuntu環境での）ソフトウェアのインストールや更新を行うパッケージ管理コマンドです。
+### 5. 実際の運用・起動手順（使い方）
+* **Webサーバー（Apache）の運用フロー**:
+  * 起動する: `sudo systemctl start apache2`
+  * 停止する: `sudo systemctl stop apache2`
+  * 状態を確認する: `systemctl status apache2`
+* **Vimでのファイル編集サバイバルフロー**:
+  1. `vim ファイル名` でファイルを開く
+  2. `i` を押して入力モード（INSERT）に入る
+  3. 編集が終わったら、`Esc` を押してコマンド待ち状態に戻る
+  4. `:wq` と入力して `Enter` を押し、保存して終了する
